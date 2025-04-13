@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday Vanshitha & Ishan!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;800&family=Great+Vibes&display=swap');
+        
+        :root {
+            --pink: #ff6b6b;
+            --blue: #4dabf7;
+            --gold: #ffd43b;
+            --purple: #9775fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow-x: hidden;
+            touch-action: manipulation;
+        }
+        
+        .birthday-card {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            padding-bottom: 50px;
+            margin: 10px;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        
+        .header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(to right, #fff, #ffd3b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff9a9e, 0 0 40px #ff9a9e;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ffb8b8, 0 0 40px #ffb8b8, 0 0 50px #ffb8b8;
+            }
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+        
+        .wish-section {
+            margin-bottom: 35px;
+            position: relative;
+        }
+        
+        .wish-section h2 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--pink);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .wish-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--pink), transparent);
+            border-radius: 2px;
+        }
+        
+        .poem {
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 3px solid var(--pink);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.7;
+            position: relative;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+        }
+        
+        .poem::before {
+            content: """;
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 8px;
+            color: rgba(255, 107, 107, 0.1);
+            font-family: serif;
+            z-index: -1;
+        }
+        
+        .funny-wish {
+            background: rgba(227, 242, 253, 0.9);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+            border: 1px dashed var(--blue);
+            font-size: 0.95rem;
+        }
+        
+        .funny-wish::after {
+            content: "😂";
+            position: absolute;
+            right: 15px;
+            bottom: 8px;
+            font-size: 1.5rem;
+            animation: laugh 1s infinite;
+        }
+        
+        @keyframes laugh {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .person {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .person-img {
+            width: 100%;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .person-img::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent 0deg,
+                transparent 180deg,
+                rgba(255,255,255,0.8) 180deg,
+                rgba(255,255,255,0.8) 360deg
+            );
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .person-img span {
+            position: relative;
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .vanshitha-img {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+        }
+        
+        .ishan-img {
+            background: linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        
+        .person-info {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .person-info h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .person-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 2px;
+            background: var(--pink);
+        }
+        
+        .person-info p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.95rem;
+            color: #888;
+            position: relative;
+        }
+        
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: var(--pink);
+            margin-top: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .signature::before, .signature::after {
+            content: '✿';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--purple);
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+        
+        .signature::before {
+            left: -30px;
+        }
+        
+        .signature::after {
+            right: -30px;
+        }
+        
+        .heart {
+            color: var(--pink);
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+            font-size: 1.5rem;
+            vertical-align: middle;
+            margin: 0 4px;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating-balloons {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            background: var(--color);
+            border-radius: 50%;
+            opacity: 0.7;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.1));
+            animation: float-up 15s linear infinite;
+            animation-delay: var(--delay);
+        }
+        
+        .balloon::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 15px;
+            background: rgba(0,0,0,0.1);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0 0 3px 3px;
+        }
+        
+        .balloon::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle at 30% 30%, #fff, transparent 60%);
+            top: 15%;
+            left: 15%;
+            border-radius: 50%;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) translateX(var(--x));
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) translateX(calc(var(--x) + 30px));
+                opacity: 0;
+            }
+        }
+        
+        .cake {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            font-size: 2.5rem;
+            animation: jump 2s infinite;
+            cursor: pointer;
+            z-index: 100;
+            touch-action: manipulation;
+        }
+        
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .candles {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        
+        .candle {
+            width: 6px;
+            height: 25px;
+            background: linear-gradient(to bottom, #fff, #f8f9fa);
+            border-radius: 3px 3px 0 0;
+            position: relative;
+        }
+        
+        .flame {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 20px;
+            background: linear-gradient(to top, var(--gold), #ff8787);
+            border-radius: 50% 50% 20% 20%;
+            filter: blur(1.5px);
+            animation: flicker 0.5s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0%, 100% { 
+                transform: translateX(-50%) scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: translateX(-50%) scale(0.9, 1.1);
+                opacity: 0.8;
+            }
+        }
+        
+        /* Remove hover effects on mobile */
+        @media (hover: none) {
+            .birthday-card:hover {
+                transform: none;
+            }
+            .wish-section:hover {
+                transform: none;
+            }
+            .poem:hover {
+                transform: none;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+            }
+            .funny-wish:hover {
+                transform: none;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+            }
+            .person:hover {
+                transform: none;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            }
+            .person:hover::before {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-balloons" id="balloons-container"></div>
+    
+    <div class="birthday-card">
+        <div class="header">
+            <h1 class="animate__animated animate__bounceIn">Happy Birthday!</h1>
+            <p class="animate__animated animate__fadeIn">To my wonderful cousins Vanshitha & Ishan</p>
+            
+            <div class="candles">
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="person animate__animated animate__fadeInLeft">
+                <div class="person-img vanshitha-img">
+                    <span>V</span>
+                </div>
+                <div class="person-info">
+                    <h3>Vanshitha</h3>
+                    <p>The most amazing cousin sister one could ask for! Beautiful inside and out, with a heart full of love and laughter.</p>
+                </div>
+            </div>
+            
+            <div class="wish-section animate__animated animate__fadeIn">
+                <h2>For Vanshitha</h2>
+                
+                <div class="poem">
+                    <p>Roses are red, violets are blue,<br>
+                    No one's as awesome as you!<br>
+                    Smart, funny, and kind too,<br>
+                    That's why we all love you! 💖</p>
+                    
+                    <p>May your day be sweet like cake,<br>
+                    Full of joy—no fake!<br>
+                    Gifts and wishes come your way,<br>
+                    Happiest birthday, hip hooray! 🎉</p>
+                </div>
+                
+                <div class="funny-wish">
+                    <p>🎤 *Ahem* Let me sing for you: <br>
+                    "Happy birthday to you,<br>
+                    You're stuck being my cousin, it's true!<br>
+                    But don't worry, I promise this year,<br>
+                    I won't embarrass you... much! 😜"</p>
+                </div>
+            </div>
+            
+            <div class="person animate__animated animate__fadeInRight">
+                <div class="person-img ishan-img">
+                    <span>I</span>
+                </div>
+                <div class="person-info">
+                    <h3>Ishan</h3>
+                    <p>The coolest cousin brother in the world! Always there with a joke when needed and support when it counts.</p>
+                </div>
+            </div>
+            
+            <div class="wish-section animate__animated animate__fadeIn">
+                <h2>For Ishan</h2>
+                
+                <div class="poem">
+                    <p>Another year older, but who's counting?<br>
+                    (Definitely not me—I'm just pretending!)<br>
+                    May your year be bright and fun,<br>
+                    With lots of wins and zero "ugh" moments! 🏆</p>
+                    
+                    <p>Stay cool, stay fly,<br>
+                    Keep reaching for the sky!<br>
+                    But most importantly—don't forget,<br>
+                    To share your cake or I'll throw a fit! 🍰</p>
+                </div>
+                
+                <div class="funny-wish">
+                    <p>🚨 <b>Breaking News!</b> 🚨<br>
+                    "Local cousin gets older, still refuses to act his age!<br>
+                    Film at 11."<br><br>
+                    Seriously though, happy birthday! Just remember—age is just a number (that keeps getting bigger every year). 😂</p>
+                </div>
+            </div>
+            
+            <div class="wish-section animate__animated animate__fadeIn">
+                <h2>To Both of You</h2>
+                
+                <div class="poem">
+                    <p>Two cousins, both so dear,<br>
+                    Bringing laughter year after year!<br>
+                    One's the queen, one's the king,<br>
+                    Together, you make everything sing! 🎶</p>
+                    
+                    <p>May your bond stay strong and true,<br>
+                    Through all life puts you through.<br>
+                    And when things get tough, just recall,<br>
+                    I'm here to embarrass you most of all! 😘</p>
+                </div>
+                
+                <div class="funny-wish">
+                    <p>📢 <b>Attention!</b> Family meeting!<br>
+                    Agenda: How to celebrate your birthdays properly!<br>
+                    Step 1: Eat cake.<br>
+                    Step 2: Laugh at my jokes (even the bad ones).<br>
+                    Step 3: Pretend you're not getting older.<br>
+                    Step 4: Repeat! 🎂😂</p>
+                </div>
+            </div>
+            
+            <div class="footer animate__animated animate__fadeInUp">
+                <p>May all your birthday wishes come true!</p>
+                <div class="signature">With love Chinnu<span class="heart">❤</span></div>
+            </div>
+        </div>
+        
+        <div class="cake" onclick="throwConfetti()">🎂</div>
+    </div>
+    
+    <script>
+        // Create floating balloons
+        document.addEventListener('DOMContentLoaded', function() {
+            const colors = ['#ff9a9e', '#fad0c4', '#a1c4fd', '#c2e9fb', '#ffd3b6', '#d4edda', '#f8d7da'];
+            const container = document.getElementById('balloons-container');
+            
+            // Fewer balloons on mobile
+            const balloonCount = window.innerWidth < 768 ? 8 : 15;
+            
+            for (let i = 0; i < balloonCount; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
+                balloon.style.setProperty('--x', Math.random() * 100 - 50 + 'px');
+                balloon.style.setProperty('--delay', Math.random() * 15 + 's');
+                container.appendChild(balloon);
+            }
+            
+            // Add animation classes with delays
+            const sections = document.querySelectorAll('.animate__animated');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.15}s`;
+            });
+            
+            // Make cake button larger for touch
+            const cakeButton = document.querySelector('.cake');
+            cakeButton.style.width = '60px';
+            cakeButton.style.height = '60px';
+            cakeButton.style.display = 'flex';
+            cakeButton.style.justifyContent = 'center';
+            cakeButton.style.alignItems = 'center';
+        });
+        
+        // Confetti explosion function
+        function throwConfetti() {
+            const colors = ['#ff9a9e', '#fad0c4', '#a1c4fd', '#c2e9fb', '#ffd3b6', '#d4edda', '#f8d7da'];
+            const container = document.getElementById('balloons-container');
+            
+            // Clear existing confetti
+            container.innerHTML = '';
+            
+            // Fewer confetti pieces on mobile
+            const confettiCount = window.innerWidth < 768 ? 50 : 100;
+            
+            // Create explosion effect
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'balloon';
+                confetti.style.width = Math.random() * 15 + 8 + 'px';
+                confetti.style.height = Math.random() * 15 + 8 + 'px';
+                confetti.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.bottom = '0';
+                confetti.style.animation = `float-up ${Math.random() * 2 + 1.5}s linear forwards`;
+                confetti.style.setProperty('--x', Math.random() * 200 - 100 + 'px');
+                container.appendChild(confetti);
+            }
+            
+            // Recreate floating balloons after 3 seconds
+            setTimeout(() => {
+                container.innerHTML = '';
+                const balloonCount = window.innerWidth < 768 ? 8 : 15;
+                for (let i = 0; i < balloonCount; i++) {
+                    const balloon = document.createElement('div');
+                    balloon.className = 'balloon';
+                    balloon.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
+                    balloon.style.setProperty('--x', Math.random() * 100 - 50 + 'px');
+                    balloon.style.setProperty('--delay', Math.random() * 15 + 's');
+                    container.appendChild(balloon);
+                }
+            }, 3000);
+            
+            // Add haptic feedback if available
+            if (window.navigator.vibrate) {
+                window.navigator.vibrate(50);
+            }
+        }
+    </script>
+</body>
+</html>
